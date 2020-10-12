@@ -1,0 +1,41 @@
+{
+  "name": "vr_mini_games_server",
+  "version": "0.0.0",
+  "description": "Virtual Reality mini games platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "test": "jest"
+  },
+  "keywords": [
+    "Typescript",
+    "GraphQL",
+    "Node",
+    "Javascript"
+  ],
+  "author": "Vladyslav Kuchmenko",
+  "license": "ISC",
+  "dependencies": {
+    "@typegoose/typegoose": "^7.4.1",
+    "apollo-server-express": "^2.18.2",
+    "class-validator": "^0.12.2",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "mongoose": "^5.10.9",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "github:types/express",
+    "@types/graphql": "^14.5.0",
+    "@types/mongoose": "^5.7.36",
+    "@types/node": "^14.11.8",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}
