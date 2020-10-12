@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserInput = void 0;
 const class_validator_1 = require("class-validator");
-const mongodb_1 = require("mongodb");
 const type_graphql_1 = require("type-graphql");
 let UserInput = class UserInput {
 };
@@ -25,10 +24,6 @@ __decorate([
     class_validator_1.IsEmail(),
     __metadata("design:type", String)
 ], UserInput.prototype, "email", void 0);
-__decorate([
-    type_graphql_1.Field(() => type_graphql_1.ID),
-    __metadata("design:type", mongodb_1.ObjectId)
-], UserInput.prototype, "user_id", void 0);
 UserInput = __decorate([
     type_graphql_1.InputType()
 ], UserInput);

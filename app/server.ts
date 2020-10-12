@@ -2,7 +2,7 @@ import { ApolloServer } from "apollo-server-express";
 import Express from "express";
 import "reflect-metadata";
 import { buildSchema } from "type-graphql";
-// import { connect } from "mongoose";
+import { connect } from "mongoose";
 
 // resolvers
 import {UserResolver} from "./resolvers/Users";
@@ -17,8 +17,8 @@ const schema = await buildSchema({
 });
 
 // create mongoose connection
-// const mongoose = await connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
-// await mongoose.connection;
+const mongoose = await connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
+await mongoose.connection;
 
 
 const server = new ApolloServer({schema});

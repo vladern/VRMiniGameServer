@@ -4,7 +4,7 @@
   "description": "Virtual Reality mini games platform",
   "main": "index.js",
   "scripts": {
-    "start": "npm run serve",
+    "start": "tsc && npm run serve",
     "serve": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
     "build-ts": "tsc",

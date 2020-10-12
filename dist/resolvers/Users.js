@@ -32,7 +32,7 @@ let UserResolver = class UserResolver {
         });
     }
     ;
-    returnAllCategories() {
+    returnAllUsers() {
         return __awaiter(this, void 0, void 0, function* () {
             return yield Users_1.UserModel.find();
         });
@@ -67,7 +67,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
-], UserResolver.prototype, "returnAllCategories", null);
+], UserResolver.prototype, "returnAllUsers", null);
 __decorate([
     type_graphql_1.Mutation(() => Users_1.User),
     __param(0, type_graphql_1.Arg("data")),

@@ -25,6 +25,7 @@ type Mutation {
 
 type Query {
   returnAllCategories: [Categories!]!
+  returnAllUsers: [User!]!
   returnSingleCategory(id: String!): Categories!
   returnSingleUser(id: String!): User!
 }
@@ -38,6 +39,5 @@ type User {
 
 input UserInput {
   email: String!
-  user_id: ID!
   username: String!
 }

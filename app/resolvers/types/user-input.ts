@@ -1,7 +1,6 @@
 import { Length, IsEmail } from "class-validator";
 import { User } from "../../entities/Users";
-import { ObjectId } from "mongodb";
-import { InputType, Field, ID } from "type-graphql";
+import { InputType, Field } from "type-graphql";
 
 @InputType()
 export class UserInput implements Partial<User> {
@@ -11,8 +10,5 @@ export class UserInput implements Partial<User> {
 
   @Field()
   @IsEmail()
-  email: String;
-
-  @Field(()=> ID)
-  user_id: ObjectId;  
+  email: String; 
 }

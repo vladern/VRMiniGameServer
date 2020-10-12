@@ -16,7 +16,7 @@ const apollo_server_express_1 = require("apollo-server-express");
 const express_1 = __importDefault(require("express"));
 require("reflect-metadata");
 const type_graphql_1 = require("type-graphql");
-// import { connect } from "mongoose";
+const mongoose_1 = require("mongoose");
 // resolvers
 const Users_1 = require("./resolvers/Users");
 const Categories_1 = require("./resolvers/Categories");
@@ -27,8 +27,8 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         validate: false,
     });
     // create mongoose connection
-    // const mongoose = await connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
-    // await mongoose.connection;
+    const mongoose = yield mongoose_1.connect('mongodb://localhost:27017/test', { useNewUrlParser: true, useUnifiedTopology: true });
+    yield mongoose.connection;
     const server = new apollo_server_express_1.ApolloServer({ schema });
     const expressServer = express_1.default();
     const serverRegistration = {

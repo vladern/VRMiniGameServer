@@ -12,7 +12,7 @@ export class UserResolver {
 
 
     @Query(() => [User])
-    async returnAllCategories(){
+    async returnAllUsers(){
       return await UserModel.find();
     };
 
