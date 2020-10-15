@@ -9,12 +9,19 @@ export class User {
 
     @Field()
     @Property({ required: true })
-    username: String;
+    username: string;
 
     @Field()
     @Property({ required: true })
-    email: String;
+    firstName: string;
 
+    @Field()
+    @Property({ required: true })
+    lastName: string;
+
+    @Field()
+    @Property({ required: true })
+    email: string;
 }
 
 export const UserModel = getModelForClass(User);

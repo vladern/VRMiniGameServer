@@ -33,11 +33,16 @@ type Query {
 """The User model"""
 type User {
   email: String!
+  firstName: String!
   id: ID!
+  lastName: String!
   username: String!
 }
 
 input UserInput {
   email: String!
+  firstName: String!
+  lastName: String!
+  password: String!
   username: String!
 }

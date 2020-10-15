@@ -27,6 +27,16 @@ __decorate([
     type_graphql_1.Field(),
     typegoose_1.prop({ required: true }),
     __metadata("design:type", String)
+], User.prototype, "firstName", void 0);
+__decorate([
+    type_graphql_1.Field(),
+    typegoose_1.prop({ required: true }),
+    __metadata("design:type", String)
+], User.prototype, "lastName", void 0);
+__decorate([
+    type_graphql_1.Field(),
+    typegoose_1.prop({ required: true }),
+    __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 User = __decorate([
     type_graphql_1.ObjectType({ description: "The User model" })

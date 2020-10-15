@@ -18,12 +18,27 @@ __decorate([
     type_graphql_1.Field(),
     class_validator_1.Length(1, 255),
     __metadata("design:type", String)
+], UserInput.prototype, "firstName", void 0);
+__decorate([
+    type_graphql_1.Field(),
+    class_validator_1.Length(1, 255),
+    __metadata("design:type", String)
+], UserInput.prototype, "lastName", void 0);
+__decorate([
+    type_graphql_1.Field(),
+    class_validator_1.Length(1, 255),
+    __metadata("design:type", String)
 ], UserInput.prototype, "username", void 0);
 __decorate([
     type_graphql_1.Field(),
     class_validator_1.IsEmail(),
     __metadata("design:type", String)
 ], UserInput.prototype, "email", void 0);
+__decorate([
+    type_graphql_1.Field(),
+    class_validator_1.Length(1, 255),
+    __metadata("design:type", String)
+], UserInput.prototype, "password", void 0);
 UserInput = __decorate([
     type_graphql_1.InputType()
 ], UserInput);
