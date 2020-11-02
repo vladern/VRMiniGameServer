@@ -5,11 +5,11 @@ import { prop as Property, getModelForClass } from "@typegoose/typegoose";
 export class Password {
     @Field()
     @Property({ required: true })
-    email: String;
+    email: string;
 
     @Field()
     @Property({ required: true })
-    passwordHash: String;
+    passwordHash: string;
 }
 
 export const PasswordModel = getModelForClass(Password);

@@ -16,6 +16,15 @@ input CategoriesInput {
   name: String!
 }
 
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type LoginResponse {
+  token: String!
+}
+
 type Mutation {
   createCategory(data: CategoriesInput!): Categories!
   createUser(data: UserInput!): User!
@@ -24,6 +33,7 @@ type Mutation {
 }
 
 type Query {
+  login(data: LoginInput!): LoginResponse!
   returnAllCategories: [Categories!]!
   returnAllUsers: [User!]!
   returnSingleCategory(id: String!): Categories!

@@ -30,15 +30,34 @@ export class UserDAO {
     return user;
   }
 
+  async findUserByEmail(email: string) {
+    const user = await UserModel.findOne({email});
+    return user;
+  }
+
+  async isValidPassword(password: string, user: User) {
+    const passwordModel = await PasswordModel.findOne({email: user.email});
+    
+    let isValid = false;
+    if (passwordModel) {
+      isValid = await bcrypt.compare(password, passwordModel.passwordHash);
+    }
+    return isValid;
+  }
+
   async isUnicUsername(username: string): Promise<boolean> {
-      const filtredUsers = (await UserModel.find()).filter(elem => elem.username === username);
-      const isUnic = filtredUsers.length === 0;
+    const filtredUsers = (await UserModel.find()).filter(
+      (elem) => elem.username === username
+    );
+    const isUnic = filtredUsers.length === 0;
     return isUnic;
   }
 
   async isUnicEmail(email: string): Promise<boolean> {
-    const filtredUsers = (await UserModel.find()).filter(elem => elem.email === email);
+    const filtredUsers = (await UserModel.find()).filter(
+      (elem) => elem.email === email
+    );
     const isUnic = filtredUsers.length === 0;
-  return isUnic;
-}
+    return isUnic;
+  }
 }
