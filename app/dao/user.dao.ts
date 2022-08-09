@@ -31,13 +31,13 @@ export class UserDAO {
   }
 
   async findUserByEmail(email: string) {
-    const user = await UserModel.findOne({email});
+    const user = await UserModel.findOne({ email });
     return user;
   }
 
   async isValidPassword(password: string, user: User) {
-    const passwordModel = await PasswordModel.findOne({email: user.email});
-    
+    const passwordModel = await PasswordModel.findOne({ email: user.email });
+
     let isValid = false;
     if (passwordModel) {
       isValid = await bcrypt.compare(password, passwordModel.passwordHash);
