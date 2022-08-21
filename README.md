@@ -1,6 +1,8 @@
 # VRMiniGameServer
-Virtual Reality mini game platform 
+## Description
+Platform where you can find various virtual reality games directly from your browser, without installation or downloading.
 
-## Serve
+## Purpose
+Create a portfolio that demonstrates my technical capabilities.
 
-npm run start
+## Development techniques that will be used
